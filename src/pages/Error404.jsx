@@ -2,6 +2,7 @@ import React from 'react'
 import './Error404.css' 
 import { Link } from "react-router-dom";
 
+//Pagina de Error404
 const Error404 = () => {
   return (
     <div className='container py-5'>
