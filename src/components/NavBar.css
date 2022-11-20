@@ -1,0 +1,9 @@
+@font-face {
+    font-family: FontRaM;
+    src: url(get_schwifty.ttf);
+}
+
+#Brand {
+    font-family: FontRaM;
+    color: yellow;
+}
