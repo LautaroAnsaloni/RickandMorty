@@ -11,14 +11,14 @@ import "./FormLogin.css";
 const FormRegister = () => {
   const [users, setUsers] = useState([]);
 
-  const registro = (nombre, apellido, doc, fechanac, correo, contrasenia) => {
+  const registro = (name, surname, doc, dateBirth, email, password) => {
     const user = {
-      nombre,
-      apellido,
+      name,
+      surname,
       doc,
-      fechanac,
-      correo,
-      contrasenia,
+      dateBirth,
+      email,
+      password,
     };
 
     setUsers([...users, user]);

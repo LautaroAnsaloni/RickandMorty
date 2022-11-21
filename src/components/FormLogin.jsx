@@ -26,7 +26,7 @@ const FormLogin = () => {
   const validar = (email, pass) => {
     const datosUser = JSON.parse(localStorage.getItem("users"));
 
-    if (email === datosUser.correo && pass === datosUser.contrasenia) {
+    if (email === datosUser.email && pass === datosUser.password) {
       localStorage.setItem("userLogged", true);
 
       window.location.replace("/");
@@ -57,14 +57,14 @@ const FormLogin = () => {
             <Form noValidate onSubmit={handleSubmit}>
               <Row className="justify-content-center">
                 <Col xs="10" md="5">
-                  <h1 className="text-warning">Login</h1>
+                  <h1 className="text-warning">Login</h1>           
                   <Row className="mb-3">
                     <Form.Group
                       as={Col}
                       md="12"
                       controlId="validationFormikUsername"
                     >
-                      <Form.Label className="text-warning">Correo electronico</Form.Label>
+                      <Form.Label className="text-warning">Correo electrónico</Form.Label>
                       <InputGroup hasValidation>
                         <Form.Control
                           type="email"
@@ -113,13 +113,14 @@ const FormLogin = () => {
                       type="submit"
                       variant="outline-warning"
                       onClick={() => validar(values.username, values.password)}
+                      className="mt-3 w-25 mx-auto"
                     >
                       Ingresar{" "}
                     </Button>
 
                     <Button
                       type="button"
-                      className="mt-3"
+                      className="mt-3 w-25 mx-auto"
                       variant="outline-warning"
                       onClick={() => goTo("/register")}
                     >
