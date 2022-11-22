@@ -55,8 +55,8 @@ const FormLogin = () => {
             errors,
           }) => (
             <Form noValidate onSubmit={handleSubmit}>
-              <Row className="justify-content-center">
-                <Col xs="10" md="5">
+              <Row className="justify-content-between mx-auto">
+                <Col xs="10" md="6" className="FormLogin">
                   <h1 className="text-warning">Login</h1>           
                   <Row className="mb-3">
                     <Form.Group
@@ -128,7 +128,7 @@ const FormLogin = () => {
                     </Button>
                   </Row>
                 </Col>
-                <Col md="7" className="d-flex justify-content-center">
+                <Col md="6" className="d-flex justify-content-center">
                   <img
                     className=" d-none d-md-flex"
                     src="https://static.tvtropes.org/pmwiki/pub/images/rick_and_morty.png"
